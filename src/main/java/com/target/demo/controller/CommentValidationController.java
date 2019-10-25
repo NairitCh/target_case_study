@@ -23,11 +23,11 @@ public class CommentValidationController {
 		ValidationResponse response = new ValidationResponse();
 		if (commentValidation.validateComment(inputComment)) {
 			response.setErrorCode("200");
-			response.setErrorMessage("comments got offensive & abusive remarks");
+			response.setErrorMessage("comment is successfully validated");
 			return ResponseEntity.ok(response);
 		} else {
 			response.setErrorCode("400");
-			response.setErrorMessage("comment is successfully validated");
+			response.setErrorMessage("comments got offensive & abusive remarks");
 			return ResponseEntity.ok(response);
 		}
 	}
